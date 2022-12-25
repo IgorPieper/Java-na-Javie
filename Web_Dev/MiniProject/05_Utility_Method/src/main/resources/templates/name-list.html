@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Name</title>
+        <style>
+            body{
+                background-color: #1e1e1e;
+                color: #ffbd59;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <h1><p style="font-weight: bold" th:text="${myName}"></p></h1>
+        <h2>
+            <ul>
+                <li th:text="${#strings.substring(myName, 0, 1)}"></li>
+                <li th:text="${#strings.substring(myName, 0, 2)}"></li>
+                <li th:text="${#strings.substring(myName, 0, 3)}"></li>
+                <li th:text="${#strings.substring(myName, 0, 4)}"></li>
+            </ul>
+        </h2>
+    </body>
+</html>
