@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Painting</title>
+        <style>
+            body{
+                background-color: #1e1e1e;
+                color: #ffbd59;
+            }
+        </style>
+    </head>
+    <body>
+        <div th:switch="${painting}">
+            <div th:case="'mona-lisa'" style="text-align: center">
+                <h1>Mona Lisa</h1>
+                <img src="images/mona-lisa.jpeg" width="200" alt="Mona Lisa">
+            </div>
+            <div th:case="'starry-night'" style="text-align: center">
+                <h1>Starry Night</h1>
+                <img src="images/starry-night.jpeg" width="200" alt="Starry Night">
+            </div>
+        </div>
+    </body>
+</html>
