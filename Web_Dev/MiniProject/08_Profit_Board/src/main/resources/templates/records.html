@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Sales Records</title>
+        <link th:href="@{stylesheet.css}" rel="stylesheet">
+    </head>
+    <body>
+        <h2>Sales Records</h2>
+        <table>
+            <tr>
+                <th>Item</th>
+                <th>Revenue</th>
+                <th>Cost</th>
+                <th>Profit</th>
+            </tr>
+            <tr th:each="element : ${records}" th:style="${element.profit > 0} ? 'background: #679289' : 'background: #ff5757'">
+                <td th:text="${element.item}">
+                <td th:text="'$' + ${element.revenue}">
+                <td th:text="'$' + ${element.cost}">
+                <td th:text="'$' + ${element.profit}">
+            </tr>
+        </table>
+    </body>
+</html>
